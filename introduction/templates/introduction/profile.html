@@ -1,5 +1,76 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<h1>자기소개 페이지</h1>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1>
+					프로필
+				</h1>
+			</div>
+			<div class="jumbotron">
+				<h2>
+					뇽안~ 난 채은이야
+				</h2>
+				<p>
+					노는 거 좋아해~ 내가 노는 모습을 보고싶으면 인스타를 봐줘
+				</p>
+				<p>
+					<a class="btn btn-primary btn-large" href="https://www.instagram.com/eunoia_cha/">instagram</a>
+				</p>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card">
+						<img class="card-img-top" alt="Bootstrap Thumbnail First" src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/19702478_1342254055892763_511669032368268583_n.jpg?_nc_cat=109&_nc_sid=8024bb&_nc_ohc=Aj7CjvkjRlMAX8SmjI-&_nc_ht=scontent-ssn1-1.xx&oh=045069b8b97efec0d196ee523e245092&oe=5F3ABF2B" />
+						<div class="card-block">
+							<h5 class="card-title">
+								favorite singer
+							</h5>
+							<p class="card-text">
+                                내가 좋아하는 걸그룹인 레드벨벳이야~ 이번에 슬기와 아이린이 유닛으로 컴백했으니까 노래 들어봐~
+							</p>
+							<p>
+								<a class="btn btn-primary" href="https://www.youtube.com/watch?v=Ujb-gvqsoi0">MV</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card">
+						<img class="card-img-top" alt="Bootstrap Thumbnail Second" src="data:image/png;base64,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" />
+						<div class="card-block">
+							<h5 class="card-title">
+								MBTI
+							</h5>
+							<p class="card-text">
+								내 mbti는 entp야 자기애가 강하고 할 일을 미루는 성격이래. 설명하는 것도 미루고 싶어서 아래 링크 있으니까 내가 궁금하면 들어가봐~
+							</p>
+							<p>
+								<a class="btn btn-primary" href="https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-entp">ENTP</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card">
+						<img class="card-img-top" alt="Bootstrap Thumbnail Third" src="https://scontent-yyz1-1.cdninstagram.com/v/t51.2885-15/e35/104605759_148561603465039_8711291000097990961_n.jpg?_nc_ht=scontent-yyz1-1.cdninstagram.com&_nc_cat=107&_nc_ohc=WXQ1JB72x7EAX-gTBxW&oh=90e21df670621d688e45e8671cc8f761&oe=5F40AB3B" />
+						<div class="card-block">
+							<h5 class="card-title">
+                                favotrite drama
+							</h5>
+							<p class="card-text">
+								내가 요즘 빠진 드라마는 치아문난난적소시광이라는 중국드라마야~ 로맨스를 좋아하면 보는거 추천해 넷플릭스에 있어! 참고로 남주가 실제로는 99년생이래,,
+							</p>
+							<p>
+								<a class="btn btn-primary" href="https://serieson.naver.com/broadcasting/detail.nhn?productNo=4211037&isWebtoonAgreePopUp=true">치아문</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 {% endblock %}

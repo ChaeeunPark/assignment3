@@ -1,9 +1,25 @@
 {% extends 'base.html' %} 
 {% load static %} 
 {% block content %} 
-<div class="container">    
-    <h1>글 목록입니다.</h1>    
-    <div class="row">        
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1>
+					글목록입니다.
+				</h1>
+			</div>
+			<div class="jumbotron">
+				<h2>
+					일기장이야
+				</h2>
+				<p>
+					내 사생활을 보고싶으면 클릭해줘~
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">        
         {% for post in posts %}        
         <div class="col-md-4 col-12">            
             <div class="card" style="width: 18rem; margin-top: 20px;">              
@@ -17,6 +33,42 @@
         </div>        
         {% endfor %}    
     </div> 
-</div> 
-<a href="{% url 'posts:new' %}" class="btn btn-primary">새글쓰기</a>
+</div>
+<br>
+<br>
+<div>       
+<a href="{% url 'posts:new' %}" class="btn btn-primary">새글쓰기</a></div>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<nav>
+				<ul class="pagination">
+					<li class="page-item">
+						<a class="page-link" href="#">Previous</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">1</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">2</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">3</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">4</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">5</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">Next</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+
 {% endblock %}
